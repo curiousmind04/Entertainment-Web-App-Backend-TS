@@ -16,7 +16,7 @@ const addMovieBookmark = async (req, res, next) => {
         user = await User.findById(req.userData.userId);
     }
     catch (err) {
-        const error = new http_error_1.default("Creating place failed, please try again.", 500);
+        const error = new http_error_1.default("Adding bookmark failed, please try again.", 500);
         return next(error);
     }
     if (!user) {
@@ -43,7 +43,7 @@ const removeMovieBookmark = async (req, res, next) => {
         user = await User.findById(req.userData.userId);
     }
     catch (err) {
-        const error = new http_error_1.default("Creating place failed, please try again.", 500);
+        const error = new http_error_1.default("Removing bookmark failed, please try again.", 500);
         return next(error);
     }
     if (!user) {
@@ -70,7 +70,7 @@ const addTVBookmark = async (req, res, next) => {
         user = await User.findById(req.userData.userId);
     }
     catch (err) {
-        const error = new http_error_1.default("Creating place failed, please try again.", 500);
+        const error = new http_error_1.default("Adding bookmark failed, please try again.", 500);
         return next(error);
     }
     if (!user) {
@@ -97,7 +97,7 @@ const removeTVBookmark = async (req, res, next) => {
         user = await User.findById(req.userData.userId);
     }
     catch (err) {
-        const error = new http_error_1.default("Creating place failed, please try again.", 500);
+        const error = new http_error_1.default("Removing bookmark failed, please try again.", 500);
         return next(error);
     }
     if (!user) {
