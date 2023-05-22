@@ -14,7 +14,7 @@ const addMovieBookmark: RequestHandler = async (req: any, res, next) => {
     user = await User.findById(req.userData.userId);
   } catch (err) {
     const error = new HttpError(
-      "Creating place failed, please try again.",
+      "Adding bookmark failed, please try again.",
       500
     );
     return next(error);
@@ -50,7 +50,7 @@ const removeMovieBookmark: RequestHandler = async (req: any, res, next) => {
     user = await User.findById(req.userData.userId);
   } catch (err) {
     const error = new HttpError(
-      "Creating place failed, please try again.",
+      "Removing bookmark failed, please try again.",
       500
     );
     return next(error);
@@ -86,7 +86,7 @@ const addTVBookmark: RequestHandler = async (req: any, res, next) => {
     user = await User.findById(req.userData.userId);
   } catch (err) {
     const error = new HttpError(
-      "Creating place failed, please try again.",
+      "Adding bookmark failed, please try again.",
       500
     );
     return next(error);
@@ -122,7 +122,7 @@ const removeTVBookmark: RequestHandler = async (req: any, res, next) => {
     user = await User.findById(req.userData.userId);
   } catch (err) {
     const error = new HttpError(
-      "Creating place failed, please try again.",
+      "Removing bookmark failed, please try again.",
       500
     );
     return next(error);
