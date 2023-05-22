@@ -33,7 +33,7 @@ const addMovieBookmark: RequestHandler = async (req: any, res, next) => {
     await sess.commitTransaction();
   } catch (err) {
     const error = new HttpError(
-      "Adding movie bookmark failed, please try again",
+      "Adding bookmark failed, please try again",
       500
     );
     return next(error);
@@ -105,7 +105,7 @@ const addTVBookmark: RequestHandler = async (req: any, res, next) => {
     await sess.commitTransaction();
   } catch (err) {
     const error = new HttpError(
-      "Adding movie bookmark failed, please try again",
+      "Adding bookmark failed, please try again",
       500
     );
     return next(error);

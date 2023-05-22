@@ -31,7 +31,7 @@ const addMovieBookmark = async (req, res, next) => {
         await sess.commitTransaction();
     }
     catch (err) {
-        const error = new http_error_1.default("Adding movie bookmark failed, please try again", 500);
+        const error = new http_error_1.default("Adding bookmark failed, please try again", 500);
         return next(error);
     }
     res.status(201).json({ movieBookmark: bookmark });
@@ -85,7 +85,7 @@ const addTVBookmark = async (req, res, next) => {
         await sess.commitTransaction();
     }
     catch (err) {
-        const error = new http_error_1.default("Adding movie bookmark failed, please try again", 500);
+        const error = new http_error_1.default("Adding bookmark failed, please try again", 500);
         return next(error);
     }
     res.status(201).json({ tvBookmark: bookmark });
